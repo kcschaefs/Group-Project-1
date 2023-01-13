@@ -1,1 +1,9 @@
+body{
+  background-size: cover;
+  background-color: black;
+}
+
+.bgimg{
+  background-image: url(./assets/background/chucknph.jpg);
+}
 
