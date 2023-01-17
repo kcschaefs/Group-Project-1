@@ -13,12 +13,13 @@
 
 .container {
   position: fixed;
-  bottom: 50%;
+  top:25%;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 50%;
-  padding: 10px;
+  padding: 150px 150px;
   align-items: center;
+  left:25%;
 }
 
 button {
@@ -91,3 +92,46 @@ margin-right: 10%;
   outline-color: rgba(255, 255, 255, 0);
   text-shadow: 1px 1px 2px #427388;
 }
+
+.simpleFAQ_list li {
+  list-style: none;
+  }
+  .simpleFAQ_list .question {
+  padding-left: 18px;
+  background: transparent url('plus.png') left center no-repeat;
+  cursor: pointer;
+  }
+  .simpleFAQShowing .question {
+  background: transparent url('minus.png') left center no-repeat;
+  }
+  .simpleFAQ_list .simpleFAQHover {
+  color: #060;
+  }
+  .simpleFAQ_item .answer {
+  margin-left: 1em;
+  border: 1px solid #66c;
+  padding: 0.4em;
+  }
+  .simpleFAQ_item .tags {
+  display: none;
+  }
+
+  .display-item {
+    text-align:center;
+    margin-top:25px;
+  }
+
+  .modal {
+    height: 50%;
+    width: 40%;
+    
+  }
+
+  .form-control {
+    border-radius:15px;
+    margin: 25px 0;
+  }
+    
+  .hide {
+    display:none;
+  }
