@@ -6,7 +6,7 @@ let emptyHeart;
 let savedData = [];
 let riddleContainer = $('.monica');
 let modal = $('.modal');
-let submitButton = $('.submitButton')
+let submitButton = $('.submit-button')
 
 
 $("#fade").modal({
@@ -80,6 +80,7 @@ function generateBucketListItem() {
      const apiBucketItem = result.item  
      let bucketGenerate = newBucketListItem.text(apiBucketItem)
 
+
      displayContainer.append(newDiv);
      newDiv.append(newBucketListItem);
      newBucketListItem.append(bucketGenerate);
@@ -147,9 +148,8 @@ splashContainer.on('click', splashButtons, function(e) {
   }
 })
 
-submitButton.on('click', function(e) {
+submitButton.on('submit', function(e) {
   e.preventDefault();
-  e.stopPropagation();
   let inputField = $('.favoriteName');
   let saveID = inputField.val();
   localStorage = localStorage.setItem(saveID, (savedData.slice(-1)))
