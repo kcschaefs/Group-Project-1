@@ -52,8 +52,7 @@ $.ajax({
       newAnswer.text(apiAnswer);
 
 
-
-    
+      savedData.push(apiQuestion + apiAnswer)  
 
 
   },
@@ -86,6 +85,8 @@ function generateBucketListItem() {
      newBucketListItem.append(bucketGenerate);
      newBucketListItem.append(newParagraph);
      newParagraph.append(emptyHeart);
+
+     savedData.push(apiBucketItem)
 
     },
     error: function ajaxError(jqXHR) {
@@ -148,7 +149,11 @@ splashContainer.on('click', splashButtons, function(e) {
 
 submitButton.on('click', function(e) {
   e.preventDefault();
-  let saveID = e.target.prev();
+  e.stopPropagation();
+  let inputField = $('.favoriteName');
+  let saveID = inputField.val();
+  localStorage = localStorage.setItem(saveID, (savedData.slice(-1)))
+  console.log(localStorage);
 
   console.log(saveID);
 })
